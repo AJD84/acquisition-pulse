@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started - Acquisition Pulse</title>
+    <meta name="description" content="Learn how to set up Acquisition Pulse with your Shopify store and Google Ads account in minutes.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .guide-section {
+            background: white;
+            padding: 3rem 2rem;
+        }
+        
+        .guide-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .guide-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .guide-header h1 {
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .guide-step {
+            background: var(--gray-50);
+            border-left: 4px solid var(--orange);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        
+        .guide-step h2 {
+            color: var(--navy);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .step-badge {
+            background: var(--orange);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.125rem;
+        }
+        
+        .guide-step ol, .guide-step ul {
+            margin: 1rem 0 1rem 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .guide-step li {
+            margin-bottom: 0.75rem;
+            color: var(--gray-600);
+        }
+        
+        .guide-step code {
+            background: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--navy);
+            border: 1px solid var(--gray-200);
+        }
+        
+        .info-box {
+            background: #EFF6FF;
+            border: 1px solid #BFDBFE;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        
+        .info-box strong {
+            color: var(--navy);
+        }
+        
+        .warning-box {
+            background: #FEF3C7;
+            border: 1px solid #FCD34D;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+        }
+        
+        .warning-box strong {
+            color: #B45309;
+        }
+        
+        .screenshot-placeholder {
+            background: var(--gray-200);
+            border: 2px dashed var(--gray-600);
+            border-radius: 8px;
+            padding: 3rem;
+            text-align: center;
+            color: var(--gray-600);
+            margin: 1.5rem 0;
+        }
+        
+        .required-columns {
+            background: white;
+            border: 1px solid var(--gray-200);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .required-columns table {
+            box-shadow: none;
+        }
+        
+        .required-columns th {
+            background: var(--gray-100);
+            color: var(--gray-800);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo-light.png" alt="Acquisition Pulse"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#benefits">Benefits</a></li>
+                    <li><a href="getting-started.html">Getting Started</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="#" class="cta">Try Demo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="guide-section">
+        <div class="guide-container">
+            <div class="guide-header">
+                <h1>Getting Started with Acquisition Pulse</h1>
+                <p>Follow these simple steps to start tracking your true profitability. Setup takes about 5 minutes.</p>
+            </div>
+
+            <div class="guide-step">
+                <h2><span class="step-badge">1</span> Export Your Shopify Order Data</h2>
+                <p>First, you'll need to export your historical order data from Shopify as a CSV file.</p>
+                
+                <ol>
+                    <li>Log in to your Shopify admin panel</li>
+                    <li>Navigate to <strong>Orders</strong> in the left sidebar</li>
+                    <li>Click <strong>Export</strong> at the top right of the orders page</li>
+                    <li>Select your export options:
+                        <ul>
+                            <li><strong>Export:</strong> All orders (or select a date range)</li>
+                            <li><strong>Export as:</strong> CSV for Excel, Numbers, or other spreadsheet programs</li>
+                        </ul>
+                    </li>
+                    <li>Click <strong>Export orders</strong></li>
+                    <li>Shopify will email you a download link within a few minutes</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Tip:</strong> For best results, export at least 6-12 months of order history. This gives Acquisition Pulse enough data to calculate accurate LTV:CAC ratios and identify trends.
+                </div>
+            </div>
+
+            <div class="guide-step">
+                <h2><span class="step-badge">2</span> Prepare Your CSV File</h2>
+                <p>Acquisition Pulse needs specific columns to calculate profitability. Make sure your CSV includes these fields:</p>
+                
+                <div class="required-columns">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Column Name</th>
+                                <th>Description</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>order_date</code></td>
+                                <td>Date the order was placed</td>
+                                <td>2024-01-15</td>
+                            </tr>
+                            <tr>
+                                <td><code>revenue</code></td>
+                                <td>Total order value (excluding tax/shipping)</td>
+                                <td>149.99</td>
+                            </tr>
+                            <tr>
+                                <td><code>cogs</code></td>
+                                <td>Cost of goods sold for this order</td>
+                                <td>67.50</td>
+                            </tr>
+                            <tr>
+                                <td><code>platform</code></td>
+                                <td>Acquisition channel (Google, Meta, TikTok, Organic, etc.)</td>
+                                <td>Google</td>
+                            </tr>
+                            <tr>
+                                <td><code>customer_id</code></td>
+                                <td>Unique customer identifier (for cohort analysis)</td>
+                                <td>cust_12345</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="warning-box">
+                    <strong>⚠️ Important:</strong> Shopify exports don't include COGS by default. You'll need to add this manually from your accounting system or calculate it based on your product costs. Use a spreadsheet program to add a <code>cogs</code> column before uploading.
+                </div>
+
+                <p><strong>How to add COGS to your export:</strong></p>
+                <ol>
+                    <li>Open the exported CSV in Excel, Google Sheets, or Numbers</li>
+                    <li>Add a new column called <code>cogs</code></li>
+                    <li>For each row, enter the total cost of goods for that order</li>
+                    <li>If you have multiple products per order, sum the individual product costs</li>
+                    <li>Save the file as CSV</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Tracking acquisition platform:</strong> If you use UTM parameters or Shopify's built-in attribution, you can map the <code>Referring site</code> or <code>Landing site</code> columns to <code>platform</code>. Otherwise, you may need to manually tag orders based on your ad campaign tracking.
+                </div>
+            </div>
+
+            <div class="guide-step">
+                <h2><span class="step-badge">3</span> Upload to Acquisition Pulse</h2>
+                <p>Once your CSV is ready, upload it to the dashboard:</p>
+                
+                <ol>
+                    <li>Open Acquisition Pulse dashboard (run <code>./start_dashboard.sh</code> locally or visit your hosted instance)</li>
+                    <li>Navigate to the <strong>Data Import</strong> section in the sidebar</li>
+                    <li>Click <strong>Choose File</strong> and select your prepared CSV</li>
+                    <li>Acquisition Pulse will validate the columns and preview your data</li>
+                    <li>Click <strong>Import</strong> to load the data into the dashboard</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>🔒 Privacy note:</strong> Your data is processed locally on your machine. We don't store or transmit your order data to any external servers.
+                </div>
+            </div>
+
+            <div class="guide-step">
+                <h2><span class="step-badge">4</span> Connect Your Google Ads Account</h2>
+                <p>To pull ad spend data automatically, connect your Google Ads account:</p>
+                
+                <ol>
+                    <li>In the Acquisition Pulse dashboard, go to <strong>Connectors</strong></li>
+                    <li>Click <strong>Connect Google Ads</strong></li>
+                    <li>You'll be redirected to Google's OAuth login page</li>
+                    <li>Sign in with the Google account that has access to your Google Ads account</li>
+                    <li>Grant Acquisition Pulse permission to read campaign data (read-only access)</li>
+                    <li>You'll be redirected back to the dashboard</li>
+                    <li>Select your Google Ads account from the dropdown</li>
+                    <li>Click <strong>Sync Data</strong> to pull campaign spend</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>🔐 Security:</strong> Acquisition Pulse uses OAuth 2.0 for authentication. Your Google credentials are never stored. Access tokens are encrypted and stored securely in your system's keyring.
+                </div>
+
+                <div class="warning-box">
+                    <strong>⚠️ Google API Approval:</strong> If you're using a newly created Google Ads API developer token, it may be in "test mode" and only work with test accounts. For production accounts, you'll need to apply for <a href="https://developers.google.com/google-ads/api/docs/access-levels" target="_blank">Basic or Standard access</a>. This typically requires a privacy policy and website (which you're reading now!).
+                </div>
+            </div>
+
+            <div class="guide-step">
+                <h2><span class="step-badge">5</span> Explore Your Profitability Data</h2>
+                <p>You're all set! Now you can:</p>
+                
+                <ul>
+                    <li>View <strong>profit by channel</strong> to see which platforms are actually profitable</li>
+                    <li>Analyze <strong>LTV:CAC ratios</strong> to understand customer lifetime value vs acquisition cost</li>
+                    <li>Check <strong>margin trends</strong> over time to spot seasonal patterns</li>
+                    <li>Run <strong>cohort analysis</strong> to see which months brought the highest-LTV customers</li>
+                    <li>Generate <strong>profitability reports</strong> for stakeholders</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Pro tip:</strong> Set up a monthly data refresh routine. Export your latest Shopify orders, update COGS, and re-upload to keep your dashboard current.
+                </div>
+            </div>
+
+            <div class="guide-step">
+                <h2>Need Help?</h2>
+                <p>If you run into issues:</p>
+                <ul>
+                    <li>Check our <a href="#">FAQ</a> for common questions</li>
+                    <li>Review the <a href="#">Documentation</a> for detailed guides</li>
+                    <li>Contact support via email or GitHub issues</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to See Your Real Profitability?</h2>
+            <p>Start analyzing your true margins today.</p>
+            <div class="cta-buttons">
+                <a href="index.html" class="btn btn-primary">Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#benefits">Benefits</a></li>
+                    <li><a href="getting-started.html">Getting Started</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Acquisition Pulse</h3>
+                <p>Know your true profitability. Make confident scaling decisions.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Acquisition Pulse. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Acquisition Pulse</title>
+    <meta name="description" content="Acquisition Pulse privacy policy - how we handle your data securely and protect your business information.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .privacy-section {
+            background: white;
+            padding: 3rem 2rem;
+        }
+        
+        .privacy-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .privacy-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-header .last-updated {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+        
+        .privacy-content h2 {
+            color: var(--navy);
+            font-size: 1.75rem;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--orange);
+        }
+        
+        .privacy-content h3 {
+            color: var(--navy);
+            font-size: 1.25rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        
+        .privacy-content p {
+            line-height: 1.8;
+            color: var(--gray-600);
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-content ul, .privacy-content ol {
+            margin: 1rem 0 1rem 2rem;
+            line-height: 1.8;
+        }
+        
+        .privacy-content li {
+            margin-bottom: 0.5rem;
+            color: var(--gray-600);
+        }
+        
+        .privacy-content strong {
+            color: var(--gray-800);
+        }
+        
+        .privacy-content code {
+            background: var(--gray-100);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: var(--navy);
+        }
+        
+        .highlight-box {
+            background: #EFF6FF;
+            border-left: 4px solid var(--orange);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html"><img src="assets/logo-light.png" alt="Acquisition Pulse"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#benefits">Benefits</a></li>
+                    <li><a href="getting-started.html">Getting Started</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="#" class="cta">Try Demo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="privacy-section">
+        <div class="privacy-container">
+            <div class="privacy-header">
+                <h1>Privacy Policy</h1>
+                <p class="last-updated">Last Updated: December 12, 2024</p>
+            </div>
+
+            <div class="privacy-content">
+                <div class="highlight-box">
+                    <p><strong>TL;DR:</strong> Acquisition Pulse is a privacy-first tool. Your business data stays on your machine. We don't collect, store, or share your order data, customer information, or financial metrics with anyone. Ever.</p>
+                </div>
+
+                <h2>1. Overview</h2>
+                <p>Acquisition Pulse ("we", "our", or "the application") is a self-hosted profitability analytics dashboard designed for e-commerce businesses. This Privacy Policy explains how we handle data when you use Acquisition Pulse.</p>
+
+                <h2>2. Data We Do NOT Collect</h2>
+                <p>Acquisition Pulse is built with a privacy-first architecture. We do not collect, transmit, or store:</p>
+                <ul>
+                    <li><strong>Order data:</strong> Your Shopify CSV exports are processed locally on your machine and never transmitted to external servers</li>
+                    <li><strong>Customer information:</strong> Customer IDs, names, emails, addresses, or any personally identifiable information (PII) remain on your device</li>
+                    <li><strong>Financial metrics:</strong> Revenue, COGS, profit margins, LTV, CAC, and all calculated metrics stay local</li>
+                    <li><strong>Campaign data:</strong> Google Ads, Meta Ads, and TikTok Ads performance data is fetched via OAuth and stored locally</li>
+                    <li><strong>Usage analytics:</strong> We don't track how you use the dashboard, which features you access, or how often you log in</li>
+                    <li><strong>Authentication credentials:</strong> Passwords (if auth is enabled) are hashed with bcrypt and stored locally; we never see your plaintext password</li>
+                </ul>
+
+                <h2>3. Data Processing</h2>
+                <h3>3.1 Local Data Storage</h3>
+                <p>When you upload a Shopify CSV or import data:</p>
+                <ul>
+                    <li>Data is processed in-memory using Python libraries (pandas, duckdb)</li>
+                    <li>Temporary data may be stored in local application state during your session</li>
+                    <li>No data is transmitted to external APIs or cloud services</li>
+                    <li>Data persists only if you explicitly save dashboard state to a local file</li>
+                </ul>
+
+                <h3>3.2 OAuth Tokens</h3>
+                <p>To connect Google Ads, Meta Ads, or TikTok Ads accounts, Acquisition Pulse uses OAuth 2.0 authentication:</p>
+                <ul>
+                    <li><strong>What we store:</strong> OAuth access tokens and refresh tokens</li>
+                    <li><strong>Where they're stored:</strong> In your operating system's secure credential storage (macOS Keychain, Windows Credential Manager, Linux Secret Service)</li>
+                    <li><strong>Encryption:</strong> Tokens are encrypted at rest using your OS's native encryption</li>
+                    <li><strong>Access:</strong> Only the Acquisition Pulse application running on your machine can access these tokens</li>
+                    <li><strong>What we DON'T do:</strong> We never transmit OAuth tokens to our servers (because we don't have servers)</li>
+                </ul>
+
+                <h3>3.3 Google Ads API Usage</h3>
+                <p>When you connect a Google Ads account:</p>
+                <ul>
+                    <li>Acquisition Pulse requests <strong>read-only</strong> access to campaign performance data</li>
+                    <li>We fetch: campaign names, spend, impressions, clicks, conversions</li>
+                    <li>We do NOT access: billing information, payment methods, or account settings</li>
+                    <li>Data is pulled directly from Google's API to your local machine</li>
+                    <li>Google may log API requests according to their own privacy policy</li>
+                </ul>
+
+                <h2>4. Third-Party Services</h2>
+                <p>Acquisition Pulse integrates with third-party advertising platforms via their official APIs:</p>
+
+                <h3>4.1 Google Ads API</h3>
+                <ul>
+                    <li><strong>Purpose:</strong> Fetch campaign spend data for profitability analysis</li>
+                    <li><strong>Data shared:</strong> None. We use OAuth to authenticate; Google does not receive your Shopify data</li>
+                    <li><strong>Google's Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+                </ul>
+
+                <h3>4.2 Meta Ads API (Future)</h3>
+                <ul>
+                    <li><strong>Purpose:</strong> Fetch Facebook/Instagram ad spend data</li>
+                    <li><strong>Data shared:</strong> None. OAuth authentication; no data transmitted to Meta beyond API requests</li>
+                    <li><strong>Meta's Privacy Policy:</strong> <a href="https://www.facebook.com/privacy/policy/" target="_blank">https://www.facebook.com/privacy/policy/</a></li>
+                </ul>
+
+                <h3>4.3 TikTok Ads API (Future)</h3>
+                <ul>
+                    <li><strong>Purpose:</strong> Fetch TikTok ad spend data</li>
+                    <li><strong>Data shared:</strong> None. OAuth authentication; no data transmitted to TikTok beyond API requests</li>
+                    <li><strong>TikTok's Privacy Policy:</strong> <a href="https://www.tiktok.com/legal/privacy-policy" target="_blank">https://www.tiktok.com/legal/privacy-policy</a></li>
+                </ul>
+
+                <h2>5. Security Measures</h2>
+                <p>We take data security seriously, even though your data never leaves your machine:</p>
+                <ul>
+                    <li><strong>Encryption:</strong> OAuth tokens stored in OS keyring with native encryption</li>
+                    <li><strong>Password hashing:</strong> If authentication is enabled, passwords are hashed with bcrypt (industry-standard one-way hashing)</li>
+                    <li><strong>No plaintext storage:</strong> Sensitive credentials are never stored in plaintext</li>
+                    <li><strong>Local-only processing:</strong> All data analysis happens on your machine; no cloud uploads</li>
+                    <li><strong>Open source:</strong> Acquisition Pulse code is available for audit on GitHub</li>
+                </ul>
+
+                <h2>6. Data Retention</h2>
+                <p>Since Acquisition Pulse is self-hosted and processes data locally:</p>
+                <ul>
+                    <li><strong>You control retention:</strong> Data persists only as long as you keep it on your machine</li>
+                    <li><strong>Deletion:</strong> To delete data, simply remove uploaded CSV files or clear dashboard state</li>
+                    <li><strong>OAuth tokens:</strong> Revoke access via Google/Meta/TikTok account settings, then delete tokens from your OS keyring</li>
+                </ul>
+
+                <h2>7. Your Rights</h2>
+                <p>Because your data stays on your device, you have full control:</p>
+                <ul>
+                    <li><strong>Access:</strong> All your data is stored locally; you can view, export, or copy it anytime</li>
+                    <li><strong>Deletion:</strong> Delete files, clear browser cache, or uninstall Acquisition Pulse to remove all data</li>
+                    <li><strong>Portability:</strong> Export data in CSV, JSON, or other formats using built-in export features</li>
+                    <li><strong>Correction:</strong> Edit CSV files or re-upload corrected data at any time</li>
+                </ul>
+
+                <h2>8. Children's Privacy</h2>
+                <p>Acquisition Pulse is designed for business use and is not intended for individuals under 18 years of age. We do not knowingly collect data from children.</p>
+
+                <h2>9. Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date. If we make significant changes, we'll notify users via:</p>
+                <ul>
+                    <li>GitHub repository release notes</li>
+                    <li>In-app notification (if applicable)</li>
+                    <li>Email (if we add a mailing list in the future)</li>
+                </ul>
+
+                <h2>10. Contact Us</h2>
+                <p>If you have questions about this Privacy Policy or how Acquisition Pulse handles data, please contact us:</p>
+                <ul>
+                    <li><strong>Email:</strong> privacy@acquisitionpulse.com (or your contact email)</li>
+                    <li><strong>GitHub:</strong> Open an issue on the Acquisition Pulse repository</li>
+                </ul>
+
+                <h2>11. Compliance</h2>
+                <p>Acquisition Pulse is designed to help you comply with data protection regulations:</p>
+
+                <h3>11.1 GDPR (General Data Protection Regulation)</h3>
+                <ul>
+                    <li>Acquisition Pulse acts as a <strong>data processor</strong> on your behalf</li>
+                    <li>You (the business owner) are the <strong>data controller</strong></li>
+                    <li>Customer data in your Shopify CSV exports may include PII subject to GDPR</li>
+                    <li>Since data stays local, you maintain full control and compliance responsibility</li>
+                </ul>
+
+                <h3>11.2 CCPA (California Consumer Privacy Act)</h3>
+                <ul>
+                    <li>Acquisition Pulse does not "sell" data (we don't collect it in the first place)</li>
+                    <li>You remain responsible for CCPA compliance for customer data in your Shopify exports</li>
+                </ul>
+
+                <h2>12. Google API Services User Data Policy</h2>
+                <p>Acquisition Pulse's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+                <p>Specifically:</p>
+                <ul>
+                    <li>We only request the minimum scopes necessary to fetch campaign performance data</li>
+                    <li>We do not use Google user data for purposes unrelated to providing Acquisition Pulse functionality</li>
+                    <li>We do not transfer Google user data to third parties (data stays local)</li>
+                    <li>We do not use Google user data for advertising</li>
+                </ul>
+
+                <h2>13. Open Source Transparency</h2>
+                <p>Acquisition Pulse is open source. You can review the source code to verify our privacy claims:</p>
+                <ul>
+                    <li><strong>GitHub Repository:</strong> [Your GitHub URL]</li>
+                    <li><strong>License:</strong> [Your License, e.g., MIT]</li>
+                    <li>All data processing logic is visible and auditable</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <p><strong>Bottom line:</strong> Your data is yours. Acquisition Pulse is a tool you run on your machine to analyze your own data. We built it this way intentionally because we believe privacy is a fundamental right, not a feature.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="index.html#how-it-works">How It Works</a></li>
+                    <li><a href="index.html#benefits">Benefits</a></li>
+                    <li><a href="getting-started.html">Getting Started</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Acquisition Pulse</h3>
+                <p>Know your true profitability. Make confident scaling decisions.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Acquisition Pulse. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

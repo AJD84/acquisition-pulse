@@ -1,0 +1,41 @@
+# Sensitive configuration files
+start_dashboard.sh
+start_backend.sh
+start_backend_with_token.sh
+run_with_oauth.sh
+setup_credentials.sh
+DEVELOPER_TOKEN_SETUP.md
+QUICK_START_AUTH.md
+.env
+*.env
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+
+# Streamlit
+.streamlit/
+
+# Data & logs
+/data/
+/logs/
+/outputs/
+
+# OAuth tokens and credentials
+tokens/
+credentials/
+*.json.secret
+
+# Data files (CSV uploads)
+*.csv
+*.xlsx
+uploads/
+
+# OS junk
+.DS_Store
+Thumbs.db
