@@ -38,7 +38,7 @@ header {
 }
 
 .header-container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
@@ -88,7 +88,7 @@ nav a.cta:hover {
 .hero {
     background: linear-gradient(135deg, var(--navy) 0%, #1E40AF 100%);
     color: white;
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
     text-align: center;
 }
 
@@ -157,21 +157,21 @@ nav a.cta:hover {
 
 /* Sections */
 section {
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3.5rem;
 }
 
 .section-header h2 {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     color: var(--navy);
     margin-bottom: 1rem;
     font-weight: 700;
@@ -186,7 +186,7 @@ section {
 
 /* Problem Section */
 .problem {
-    background: var(--gray-50);
+    background: #F8FAFC;
 }
 
 .problem-grid {
@@ -198,8 +198,9 @@ section {
 .problem-card {
     background: white;
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 14px;
     border: 1px solid var(--gray-200);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
 .problem-card h3 {
@@ -219,7 +220,7 @@ section {
 }
 
 .comparison-table {
-    max-width: 900px;
+    max-width: 950px;
     margin: 0 auto;
     overflow-x: auto;
 }
@@ -228,9 +229,9 @@ table {
     width: 100%;
     border-collapse: collapse;
     background: white;
-    border-radius: 12px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
 thead {
@@ -254,12 +255,16 @@ tbody tr {
     border-bottom: 1px solid var(--gray-200);
 }
 
+tbody tr:nth-child(even) {
+    background: var(--gray-50);
+}
+
 tbody tr:last-child {
     border-bottom: none;
 }
 
 tbody tr:hover {
-    background: var(--gray-50);
+    background: #EEF2F7;
 }
 
 td {
@@ -282,7 +287,7 @@ td.cross {
 
 /* How It Works */
 .how-it-works {
-    background: var(--gray-50);
+    background: #F8FAFC;
 }
 
 .steps {
@@ -294,6 +299,17 @@ td.cross {
 .step {
     text-align: center;
     position: relative;
+    background: white;
+    padding: 2rem;
+    border-radius: 14px;
+    border: 1px solid var(--gray-200);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.step:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.1);
 }
 
 .step-number {
@@ -335,8 +351,9 @@ td.cross {
 .benefit {
     padding: 2rem;
     background: var(--gray-50);
-    border-radius: 12px;
-    border-left: 4px solid var(--orange);
+    border-radius: 14px;
+    border: 1px solid var(--gray-200);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
 .benefit h3 {
@@ -355,7 +372,7 @@ td.cross {
     background: linear-gradient(135deg, var(--navy) 0%, #1E40AF 100%);
     color: white;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
 }
 
 .cta-section h2 {
@@ -374,7 +391,7 @@ td.cross {
 footer {
     background: var(--gray-900);
     color: var(--gray-200);
-    padding: 3rem 2rem 2rem;
+    padding: 3.5rem 2rem 2.5rem;
 }
 
 .footer-container {
