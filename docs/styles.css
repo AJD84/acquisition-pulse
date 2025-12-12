@@ -30,7 +30,7 @@ body {
 header {
     background: white;
     border-bottom: 1px solid var(--gray-200);
-    padding: 1rem 0;
+    padding: 1.75rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -47,7 +47,7 @@ header {
 }
 
 .logo img {
-    height: 180px;
+    height: 200px;
     width: auto;
 }
 
@@ -432,7 +432,7 @@ footer {
     }
 
     .logo img {
-        height: 120px;
+        height: 140px;
     }
     
     .header-container {
