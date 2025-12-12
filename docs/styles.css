@@ -30,7 +30,7 @@ body {
 header {
     background: white;
     border-bottom: 1px solid var(--gray-200);
-    padding: 1.75rem 0;
+    padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -47,7 +47,7 @@ header {
 }
 
 .logo img {
-    height: 200px;
+    height: 80px;
     width: auto;
 }
 
@@ -432,11 +432,10 @@ footer {
     }
 
     .logo img {
-        height: 140px;
+        height: 60px;
     }
     
-    .header-container {
-        flex-direction: column;
+    .header-container {n        flex-direction: column;
         gap: 1rem;
     }
     
