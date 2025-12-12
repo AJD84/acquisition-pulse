@@ -47,7 +47,7 @@ header {
 }
 
 .logo img {
-    height: 140px;
+    height: 180px;
     width: auto;
 }
 
@@ -235,8 +235,8 @@ table {
 
 thead {
     background: var(--navy);
-    color: white;
-}
+    border-bottom: 1px solid var(--gray-200);
+    padding: 1.5rem 0;
 
 th, td {
     padding: 1rem 1.5rem;
@@ -432,7 +432,7 @@ footer {
     }
 
     .logo img {
-        height: 96px;
+        height: 120px;
     }
     
     .header-container {
