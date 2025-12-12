@@ -47,7 +47,7 @@ header {
 }
 
 .logo img {
-    height: 72px;
+    height: 96px;
     width: auto;
 }
 
@@ -429,6 +429,10 @@ footer {
     nav ul {
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .logo img {
+        height: 64px;
     }
     
     .header-container {
